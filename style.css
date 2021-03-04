@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 10vh;
+  background: #5b78c7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: #ae5fce;
+}
+
+@media screen and (max-width: 640px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #5b78c7;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* Log In buttons disign start*/
+.sign-blok{
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33,33,33,.2);
+  z-index: 200;
+  box-sizing: border-box;
+}
+.sign-blok_active{
+  display: flex;
+}
+.sign{
+  background-color: #d0cc1a;
+  width: 350px;
+  height: 300px;
+  border-radius: 20px;
+}
+.auth-link{
+  background-color: #00ffff;
+}
+.exit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  width: 10%;
+  height: 8%;
+  border-radius:0 10px;
+  position: relative;
+  left: 312px;
+  background: rgba(114,114,114, .15);
+  transition: .3ms;
+}
+.exit:hover{
+  background: #e01533;
+  color: #fff;
+}
+.sign-head{
+  font-size: 35px;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  user-select: none;
+}
+.input-data, .input-btn{
+  width: 70%;
+  margin: 15px auto;
+}
+.input-data input{
+  width: 100%;
+  border: 2px solid rgba(114,114,114, .5);
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'PT Sans', sans-serif;
+  transition: 3s;
+  height: 25px;
+  text-align: center;
+}
+.input-data input:focus{
+  border: 2px solid #e01533;
+  color: #e01533;
+}
+.input-btn input{
+  width: 100%;
+  border: 2px solid #e01533;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+  background: #e01533;
+  padding: 6px 0;
+  transition: .3s;
+}
+.input-btn input:hover{
+  background: #fff;
+  color: #e01533;
+}
+.notReg{
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.notReg-btn input{
+  background: #fff;
+  color: #e01533;
+}
+.notReg-btn input:hover{
+  background: #e01533;
+  color: #fff;
+}
+/*Log In buttons disign end*/
+
+/*Sercher table*/
+.serch-box{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  right: 0px;
+  top: 70px;
+  background: #e4ec09;
+  border-radius: 10px;
+  padding: 6px;
+
+
+}
+.serch-btn{
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.serch-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  transition: 0.4s;
+}
+/*Start Main list */
+.navbar-default{
+  height: 100%;
+  width:100% ;
+}
+.container{
+ margin-top: 110px;
+  max-width: 900px;
+  background-color: gray;
+  border-radius: 20px;
+  display: inline-block;
+  
+ 
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+  "header"
+  "article"
+  "aside"
+  "footer";
+}
+
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: article;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 640px) {
+  .grid {
+      grid-template-columns: 2fr 4fr;
+      grid-template-areas:
+    "header header"
+    "aside article"
+    "aside footer"
+  }
+}
+
+.grid > * {
+  background-color: #28314E;
+  border: 1px solid #212941;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: roboto, serif;
+}
+
+.grid > *:nth-child(odd) {
+  background-color: #475477;
+}
+.feetback{
+  margin-top: 50px;
+  max-width: 800px;
+  padding: 10px;
+  transform: translate(34%);
+  background-color: gray;
+  border-radius: 20px;
+}
+
+/* text */
+p { 
+  color: #f2f2f2; 
+  background: #ff4a4a;  
+  font-family: ‘Libre Baskerville’, serif; }
+
+.shrift{
+  margin-left:  60px;
+  margin-top: 15px;
+}
+
+/* logo */
+.logo{
+  position: fixed; 
+  margin-left: 15px;
+  background-color:gold;
+  border-radius: 25px;
+
+}
+.header_fixed {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+  
+}
+.add_btn{
+  background-color:#e01533;
+  border-radius: 4px;
+  background-size: 100% auto;
+  margin-bottom: 15px;
+  
+}
+
+/* popUp */
+
+*{
+  font-family: Areal;
+}
+
+.b-popup{
+  width: 100%;
+  height: 1000px;
+  background-color:beige;
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  left: 0;
+  z-index: 200px;
+}
+.b-popup .b-popup-content{
+  margin-top: 10px;
+  margin:40px auto 0px auto;
+  width:100px;
+  height: 40px;
+  padding:10px;
+  background-color: #c5c5c5;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px #000;
+}
